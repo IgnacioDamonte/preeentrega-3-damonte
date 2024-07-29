@@ -2,6 +2,10 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+import sqlite3
+
+conn = sqlite3.connect('db.sqlite3')
+cursor = conn.cursor()
 
 
 def main():
