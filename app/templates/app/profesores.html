@@ -1,5 +1,8 @@
-{% extends "app/base.html" %}
+{% extends 'app/base.html' %}
+
 {% load static %}
+
+{% block title %} Formulario - Agregar Profesores {% endblock title %}
 
 {% block main %}
 
@@ -14,4 +17,12 @@
         </div>
     </div>
 </section>
+<form action="/profesores/" method="POST">
+    {% csrf_token %}
+    <p>Nombre: <input type="text" name="Nombre"></p>
+    <p>Apellido: <input type="text" name="Apellido"></p>
+
+    <input type="submit" value="Enviar">
+
+</form>
 {% endblock main %}       

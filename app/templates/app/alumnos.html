@@ -1,8 +1,10 @@
-{% extends "app/base.html" %}
+{% extends 'app/base.html' %}
+
 {% load static %}
 
-{% block main %}
+{% block title %} Formulario - Agregar Alumnos {% endblock title %}
 
+{% block main %}
 <section class="py-5">
     <div class="container my-5">
         <div class="row justify-content-center">
@@ -14,4 +16,14 @@
         </div>
     </div>
 </section>
-{% endblock main %}       
+    <!-- action: representa la url a la que nos va a re-dirigir y enviar la info.
+    Tiene prioridad por sobre la redirección que podamos colocar en views.py -->
+    <form action="/alumnos/" method="POST">
+        {% csrf_token %}
+        <p>Nombre: <input type="text" name="Nombre"></p>
+        <p>Apellido: <input type="text" name="Apellido"></p>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+{% endblock main %}         
