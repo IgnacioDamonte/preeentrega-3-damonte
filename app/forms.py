@@ -1,12 +1,21 @@
 from django import forms
 
-class Curso(forms.Form):
+class CursoForm(forms.Form):
     curso = forms.CharField()
     camada = forms.IntegerField()
 
-class Alumnos(forms.Form):
+class BuscarCursoForm(forms.Form):
+    curso = forms.CharField()
+
+class AlumnosForm(forms.Form):
     nombre = forms.CharField()
-    apellido = forms.IntegerField()
+    apellido = forms.CharField()
+    
+class BuscarAlumnos(forms.Form):
+    nombre = forms.CharField()
+    apellido = forms.CharField()
+    
+    
 
 class Profesores(forms.Form):
     nombre = forms.CharField()

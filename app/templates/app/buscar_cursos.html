@@ -1,4 +1,4 @@
-<!--{% extends 'app/base.html' %}
+{% extends 'app/base.html' %}
 
 {% load static %}
 
@@ -7,9 +7,7 @@
 {% block main %}
     <form action="" method="POST">
         {% csrf_token %}
-        <table>
-            {{ mi_formulario.as_table }}
-        </table>
+        {{ form.as_p}}
         <input type="submit" value="Enviar">
 
     </form>

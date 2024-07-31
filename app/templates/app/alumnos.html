@@ -18,10 +18,11 @@
 </section>
     <!-- action: representa la url a la que nos va a re-dirigir y enviar la info.
     Tiene prioridad por sobre la redirección que podamos colocar en views.py -->
-    <form action="/alumnos/" method="POST">
+    <form action="" method="POST">
         {% csrf_token %}
-        <p>Nombre: <input type="text" name="Nombre"></p>
-        <p>Apellido: <input type="text" name="Apellido"></p>
+        <table>
+            {{ form.as_table }}
+        </table>
 
         <input type="submit" value="Enviar">
 
