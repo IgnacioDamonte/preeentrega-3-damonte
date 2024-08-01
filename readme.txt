@@ -1,5 +1,5 @@
 ## Requisitos
-- Python 3.11.9
+- Python 3.12.4
 - Django 4.2
 
 ## Instalación
@@ -65,6 +65,5 @@ Si deseas contribuir al proyecto, por favor sigue estos pasos:
 
 Asegúrate de seguir el estilo de código y de agregar pruebas para cualquier nueva funcionalidad.
 
-## Licencia
-Este proyecto está licenciado bajo la Licencia MIT. Puedes usar, modificar y distribuir este software bajo los términos de esta licencia.
+
 
