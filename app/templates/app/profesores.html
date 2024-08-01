@@ -19,8 +19,9 @@
 </section>
 <form action="/profesores/" method="POST">
     {% csrf_token %}
-    <p>Nombre: <input type="text" name="Nombre"></p>
-    <p>Apellido: <input type="text" name="Apellido"></p>
+    <table>
+        {{ form.as_table }}
+    </table>
     
     <input type="submit" value="Enviar">
 

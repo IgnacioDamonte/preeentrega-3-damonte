@@ -21,3 +21,8 @@ class Profesores(forms.Form):
     nombre = forms.CharField()
     apellido = forms.IntegerField()
     email = forms.EmailField()
+    
+class ProfesoresForm(forms.Form):
+    nombre = forms.CharField()
+    apellido = forms.CharField()
+    email = forms.EmailField()

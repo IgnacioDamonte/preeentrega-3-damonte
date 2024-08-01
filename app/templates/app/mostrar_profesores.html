@@ -1,0 +1,15 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+
+
+{% for profesor in profesores %}
+    <li>Nombre: {{ profesor.nombre }} | Apellido: {{ profesor.apellido }} | Email: {{ profesor.email }} </li>
+{% endfor %}
+
+
+{% endblock main %}
