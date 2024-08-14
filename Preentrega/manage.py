@@ -3,6 +3,7 @@
 import os
 import sys
 import sqlite3
+import django
 
 conn = sqlite3.connect('db.sqlite3')
 cursor = conn.cursor()
@@ -10,9 +11,9 @@ cursor = conn.cursor()
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Preentrega.Preentrega.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Preentrega.settings')
     try:
-        from django.core.management import execute_from_command_line # type: ignore
+        from django.core.management import execute_from_command_line 
     except ImportError as exc:
         raise ImportError(
             "Couldn't import Django. Are you sure it's installed and "

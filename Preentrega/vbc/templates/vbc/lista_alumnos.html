@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block title %} Formulario - Agregar Alumnos {% endblock title %}
+
+{% block main %}
+
+    <!-- action: representa la url a la que nos va a re-dirigir y enviar la info.
+    Tiene prioridad por sobre la redirección que podamos colocar en views.py -->
+    {% for alumno in Alumnos%}
+    {% endfor %}
+{% endblock main %}         
